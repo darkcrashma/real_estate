@@ -752,13 +752,13 @@ template {
 .userBlock__box {
     width: 48%;
 }
-.memberBox {
+.formBox {
     padding: 15px 0 20px 15px;
     background-color: #7db5d9;
     border: 1px solid #d7d7d7;
     border-radius: 10px;
 }
-.memberBox__title {
+.formBox__title {
     color: #ffffff;
     font-family: "Arial MT",sans-serif;
     font-size: 24px;
@@ -766,8 +766,7 @@ template {
     margin-bottom: 18px;
 }
 
-.memberBox__name,
-.memberBox__pass {
+.formBox__input {
     padding: 8px 0 8px 11px ;
     color: #4b7d9b;
     font-family: "Arial MT", sans-serif;
@@ -776,11 +775,15 @@ template {
     border: 1px solid #ffffff;
     border-radius: 5px;
 }
-.mainButton--memberBox {
+
+.mainButton--formBox {
     padding: 7.7px 20px;
     font-size: 14px;
     border-radius: 5px;
+}
 
+.formBox__title--subscribeBox {
+    font-size: 20px;
 }
 
 

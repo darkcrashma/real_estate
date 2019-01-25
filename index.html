@@ -167,17 +167,27 @@
             <div class="grid">
                 <div class="userBlock__wrapper">
                     <div class="userBlock__box">
-                        <div class="memberBox">
-                            <div class="memberBox__title">Member login</div>
-                            <form action="#" class="memberBox__form">
-                                <input type="text" class="memberBox__name" placeholder="User Name">
-                                <input type="text" class="memberBox__pass" placeholder="Password">
-                                <input type="submit" class="memberBox__btn mainButton mainButton--memberBox" value="Login">
+                        <div class="formBox memberBox">
+                            <div class="formBox__title">Member login</div>
+                            <form action="#" sclass="memberBox__form">
+                                <input type="text" class="formBox__input memberBox__name" placeholder="User Name">
+                                <input type="text" class="formBox__input memberBox__pass" placeholder="Password">
+                                <input type="submit" class="memberBox__btn mainButton mainButton--formBox" value="Login">
                             </form>
                         </div>
-                        <div class="signUpBox"></div>
+                        <div class="signUpBox">
+
+                        </div>
                     </div>
-                    <div class="subscribeBox"></div>
+                    <div class="userBlock__box">
+                        <div class="formBox subscribeBox">
+                            <div class="formBox__title  formBox__title--subscribeBox">Subscribe to our weekly newsletter</div>
+                            <form action="#" class="subscribeBox__form">
+                                <input type="text" class="formBox__input subscribeBox__name" placeholder="User Name">
+                                <input type="submit" class="subscribeBox__btn mainButton mainButton--formBox" value="Subscribe">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
