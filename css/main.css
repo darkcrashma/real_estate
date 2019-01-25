@@ -347,11 +347,13 @@ template {
 [hidden] {
     display: none;
 }
-
+/*Сетка*/
 .grid {
     width: 1004px;
     margin: 0 auto;
 }
+
+/*Оформляем верхнее меню*/
 .headerTop {
     background-color: #4f86a8;
 }
@@ -392,6 +394,8 @@ template {
     color: #ffffff;
     text-decoration: none;
 }
+
+/*Оформляем навигационное меню*/
 .headerMenu {
     background-color: #dedede;
     border-bottom: 4px solid #4b83a7;
@@ -411,7 +415,7 @@ template {
     display: block;
     position: relative;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 15px 20px;
     color: #3a5362;
     font-family: "MS Sans Serif", Arial,sans-serif;
     font-size: 16px;
@@ -470,11 +474,7 @@ template {
     opacity: 1;
 }
 
-
-
-
-
-
+/*Оформляем блок авторизации*/
 .headerMenu__signIn,
 .headerMenu__signUp {
     display: inline-block;
@@ -499,10 +499,195 @@ template {
     height: 5px;
 }
 
+/*Оформляем слайдер*/
+.aboutFlats {
+    background-color: #4c84a7;
+
+}
+.aboutFlats__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+.sliderFlats {
+    width: 53%;
+}
+.sliderFlats>.draggable {
+    border: 7px solid white;
+}
+.sliderFlats__img img {
+    width: 100%;
+}
+
+.sliderFlats__description {
+    background-color: #1a425a;
+    border-top: 1px solid #3686b8;
+    width: 100%;
+    padding-top: 13px;
+    padding-left: 26px;
+}
+.sliderFlats__title {
+    color: #ffffff;
+    font-family: "Arial MT",sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+}
+.sliderFlats__subtitle{
+    color: #ffffff;
+    font-family: "Arial MT", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 34px;
+}
+.sliderFlats .slick-dots li button::before {
+    font-size: 10px;
+}
+.sliderFlats .slick-dots li.slick-active button::before {
+    opacity: 1;
+    color: #ffffff;
+}
+.sliderFlats .slick-dots li button:hover:before,
+.sliderFlats .slick-dots li button:focus:before {
+    color: #ffffff;
+    opacity: 1;
+}
 
 
 
+/*Оформляем форму*/
+.chooseFlats {
+    width: 42%;
+}
+.chooseFlats__nav {
+    display: flex;}
 
+#chooseFlats__tenants,
+#chooseFlats__oweners {
+    visibility: hidden;
+}
+
+.chooseFlats__tenantsLabel,
+.chooseFlats__owenersLabel {
+    color: #ffffff;
+    font-family: "Arial Rounded MT Bold",sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+.chooseFlats__button1 {
+    background-color: #5697bf;
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+    margin-right: 7px;
+}
+.chooseFlats__button2 {
+    background-color: #c2f2ed;
+    padding: 10px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.chooseFlats__filter {
+    background-color: #5596bd;
+    padding: 24px 30px;
+    border-radius: 0 10px 0 0;
+}
+
+.chooseFlats__formLabel {
+    color: #ffffff;
+    font-family: "Arial MT",sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 21px;
+}
+.chooseFlats__addressForm {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 339px;
+    height: 44px;
+    border: 3px solid #316e94;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.11) 0%, rgba(0, 0, 0, 0.11) 100%);
+    border-radius: 10px;
+    color: #347095;
+    font-family: "MS Sans Serif", Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: center;
+}
+.chooseFlats__selects {
+    display: flex;
+
+}
+.chooseFlats__propertyType,
+.chooseFlats__bedroomsForm{
+    margin-bottom: 10px;
+    width: 204px;
+    height: 32px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.07), inset 0 0 0 2px #fcfdfd;
+    border: 1px solid #bbbbbb;
+    background-image: linear-gradient(to top, rgba(244, 244, 244, 0.4) 0%, rgba(243, 243, 243, 0.4) 50%, rgba(255, 255, 255, 0.4) 52%, rgba(255, 255, 255, 0.4) 100%);
+}
+
+.chooseFlats__btn {
+    padding: 10px 70px;
+    border: 3px solid #d7d7d7;
+    background-image: linear-gradient(to top, #498ab2 0%, #6bb2dd 100%);
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: "Arial MT",sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+
+/*Оформляем блок операций с недвижимостью*/
+.propertyOperations {
+    background: rgb(232,254,251);
+    background: linear-gradient(180deg, rgba(232,254,251,1) 34%, rgba(195,243,238,1) 93%);
+}
+.propertyOperations__wrapper {
+    padding: 15px 0;
+}
+.propertyOperations__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.propertyOpertaions__item {
+    padding-right: 53px;
+}
+.propertyOpertaions__item:nth-child(3) {
+    padding-right: 0;
+}
+.propertyOperations__title {
+    display: block;
+    position: relative;
+    color: #4484ad;
+    font-family: "Arial MT",sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: none;
+    padding-top: 11px;
+    padding-left: 40px;
+    margin-bottom: 16px;
+}
+.propertyOperations__title::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 31px;
+    top: 50%;
+    left: 0;
+    background: url("../img/propertyOperations/home.png");
+    transform: translateY(-13px);
+
+}
+.propertyOpertaions__info {
+    color: #43515a;
+    font-family: "Arial MT",sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 22px;}
 
 
 

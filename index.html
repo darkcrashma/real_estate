@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Real Estate</title>
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -48,5 +50,84 @@
                 </div>
             </div>
     </header>
+    <main>
+        <div class="aboutFlats">
+            <div class="grid">
+                <div class="aboutFlats__wrapper">
+                    <div class="sliderFlats">
+                        <div class="sliderFlats__item">
+                            <div class="sliderFlats__img"><img src="img/sliderFlats/sliderFlats__item.png" alt="photo"></div>
+                            <div class="sliderFlats__description">
+                                <a href="#" class="sliderFlats__title">Lorem Ipsum is simply dummy text of</a><br>
+                                <span class="sliderFlats__subtitle">We work with investors to make managing your investments easy!</span>
+                            </div>
+                        </div>
+                        <div class="sliderFlats__item">
+                            <div class="sliderFlats__img"><img src="img/sliderFlats/sliderFlats__item.png" alt="photo"></div>
+                            <div class="sliderFlats__description">
+                                <a href="#" class="sliderFlats__title">Lorem Ipsum is simply dummy text of</a><br>
+                                <span class="sliderFlats__subtitle">We work with investors to make managing your investments easy!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chooseFlats">
+                        <div class="chooseFlats__nav">
+                            <div class="chooseFlats__button1">
+                                <label class="chooseFlats__tenantsLabel" for="chooseFlats__tenants">Tenants</label>
+                                <input id="chooseFlats__tenants" name="aspirants" type="radio" value="tenants" checked>
+                            </div>
+                            <div class="chooseFlats__button2">
+                                <label class="chooseFlats__owenersLabel" for="chooseFlats__oweners">Oweners</label>
+                                <input id="chooseFlats__oweners" name="aspirants" type="radio" value="oweners">
+                            </div>
+                        </div>
+                        <div class="chooseFlats__filter">
+                            <label for="addressForm" class="chooseFlats__formLabel">Address, Suburbs, Postcodes, or Regions</label><br>
+                            <input type="text" class="chooseFlats__addressForm" id="addressForm" placeholder="Example: Wichita Falls, Texas 76301"><br>
+                            <input type="checkbox"  class="chooseFlats__checkForm" id="checkForm">
+                            <label class="chooseFlats__formLabel" for="checkForm">Include surrounding suburbs</label><br>
+                            <label class="chooseFlats__formLabel" for="propertyType">Property Type :</label>
+                            <select class="chooseFlats__propertyType" id="propertyType">
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                            </select><br>
+                            <label class="chooseFlats__formLabel" for="bedroomsForm">Bedrooms :</label>
+                            <select class="chooseFlats__bedroomsForm" id="bedroomsForm">
+                                <option value="one">One</option>
+                                <option value="two">Two</option>
+                            </select><br>
+                            <button class="chooseFlats__btn">Search</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="propertyOperations">
+            <div class="grid">
+                <div class="propertyOperations__wrapper">
+                    <ul class="propertyOperations__list">
+                        <li class="propertyOpertaions__item">
+                            <a href="#" class="propertyOperations__title">Buy a home</a>
+                            <div class="propertyOpertaions__info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</div>
+                        </li>
+                        <li class="propertyOpertaions__item">
+                            <a href="#" class="propertyOperations__title">Sell a home</a>
+                            <div class="propertyOpertaions__info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                unknown</div>
+                        </li>
+                        <li class="propertyOpertaions__item">
+                            <a href="#" class="propertyOperations__title">Rent a home</a>
+                            <div class="propertyOpertaions__info">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="lib/slick/slick.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
