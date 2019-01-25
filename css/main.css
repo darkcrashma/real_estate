@@ -689,7 +689,50 @@ template {
     font-weight: 400;
     line-height: 22px;}
 
+/*Оформляем блок с поиском квартир*/
+.searchFlats__wrapper {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+.searchItem
+{   display: flex;
+    flex-direction: column;
+    width: 23%;
+    margin-right: 15px;
+    margin-bottom: 21px;
+    float: left;
+    text-decoration: none;
+}
 
+.searchItem img {
+    width: 100%;
+    height: 100%;
+
+}
+.searchItem__info {
+    position: relative;
+    padding: 10px 58px 10px 10px;
+    background-color: #4f8fb7;
+    border-radius: 0 0 10px 10px;
+    color: #ffffff;
+    font-family: "MS Sans Serif",sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+
+}
+.searchItem__info::after {
+    content: '';
+    width: 33px;
+    height: 33px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -17.5px;
+    background: url("../img/searchFlats/magnifying-glass.svg");
+    -webkit-background-size: cover;
+    background-size: cover;
+}
 
 
 
