@@ -11,44 +11,46 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+<div class="wrapper">
+    <div class="content"></div>
     <header class="header">
-            <div class="headerTop">
-                <div class="grid">
-                    <div class="headerTop__wrapper">
-                        <div class="logo headerTop__logo">
-                            <a href="#" class="logo__wrapper">
-                                <div class="logo__img"><img src="img/logo/Logo.png" alt="logo"></div>
-                                <div class="logo__box">
-                                    <div class="logo__title">Realestate Company</div>
-                                    <div class="logo__subtitle">Lorem Ipsum is simply dummy text</div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="headerTop__call">
-                            <a href="tel:(214) 227-7669" class="headerTop__phone"><span>Call us:</span>(214)227-7669</a>
-                        </div>
+        <div class="headerTop">
+            <div class="grid">
+                <div class="headerTop__wrapper">
+                    <div class="logo headerTop__logo">
+                        <a href="#" class="logo__wrapper">
+                            <div class="logo__img"><img src="img/logo/Logo.png" alt="logo"></div>
+                            <div class="logo__box">
+                                <div class="logo__title">Realestate Company</div>
+                                <div class="logo__subtitle">Lorem Ipsum is simply dummy text</div>
+                            </div>
+                        </a>
                     </div>
-                </div>
-             </div>
-            <div class="headerMenu">
-                <div class="grid">
-                    <div class="headerMenu__wrapper">
-                        <div class="navigation headerMenu__nav">
-                            <ul class="navigation__list">
-                                <li><a class="navigation__item" href="#"><span></span>Home</a></li>
-                                <li><a class="navigation__item" href="#"><span></span>Our Story</a></li>
-                                <li><a class="navigation__item" href="#"><span></span>Tenant</a></li>
-                                <li><a class="navigation__item" href="#"><span></span>Owner</a></li>
-                                <li><a class="navigation__item" href="#"><span></span>Contact us</a></li>
-                            </ul>
-                        </div>
-                        <div class="headerMenu__authorisation">
-                            <a class="headerMenu__signIn" href="#">Sign In</a>
-                            <a class="headerMenu__signUp" href="#">Sign Up</a>
-                        </div>
+                    <div class="headerTop__call">
+                        <a href="tel:(214) 227-7669" class="headerTop__phone"><span>Call us:</span>(214)227-7669</a>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="headerMenu">
+            <div class="grid">
+                <div class="headerMenu__wrapper">
+                    <div class="navigation headerMenu__nav">
+                        <ul class="navigation__list">
+                            <li><a class="navigation__item" href="#"><span></span>Home</a></li>
+                            <li><a class="navigation__item" href="#"><span></span>Our Story</a></li>
+                            <li><a class="navigation__item" href="#"><span></span>Tenant</a></li>
+                            <li><a class="navigation__item" href="#"><span></span>Owner</a></li>
+                            <li><a class="navigation__item" href="#"><span></span>Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="headerMenu__authorisation">
+                        <a class="headerMenu__signIn" href="#">Sign In</a>
+                        <a class="headerMenu__signUp" href="#">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <div class="aboutFlats">
@@ -81,7 +83,7 @@
                                 <input id="chooseFlats__oweners" name="aspirants" type="radio" value="oweners">
                             </div>
                         </div>
-                        <div class="chooseFlats__filter">
+                        <form class="chooseFlats__filter">
                             <label for="addressForm" class="chooseFlats__formLabel">Address, Suburbs, Postcodes, or Regions</label><br>
                             <input type="text" class="chooseFlats__addressForm" id="addressForm" placeholder="Example: Wichita Falls, Texas 76301"><br>
                             <input type="checkbox"  class="chooseFlats__checkForm" id="checkForm">
@@ -97,7 +99,7 @@
                                 <option value="two">Two</option>
                             </select><br>
                             <button class="mainButton">Search</button>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
@@ -169,14 +171,15 @@
                     <div class="userBlock__box">
                         <div class="formBox memberBox">
                             <div class="formBox__title">Member login</div>
-                            <form action="#" sclass="memberBox__form">
+                            <form action="#" class="memberBox__form">
                                 <input type="text" class="formBox__input memberBox__name" placeholder="User Name">
                                 <input type="text" class="formBox__input memberBox__pass" placeholder="Password">
                                 <input type="submit" class="memberBox__btn mainButton mainButton--formBox" value="Login">
                             </form>
                         </div>
-                        <div class="signUpBox">
-
+                        <div class="formBox signUpBox">
+                            <div class=" formBox__title signUpBox__title">Not a member yet</div>
+                            <a href="#" class="signUpBox__btn">Signup now</a>
                         </div>
                     </div>
                     <div class="userBlock__box">
@@ -187,11 +190,64 @@
                                 <input type="submit" class="subscribeBox__btn mainButton mainButton--formBox" value="Subscribe">
                             </form>
                         </div>
+                        <div class="socialBox">
+                            <a href="#" class="socialBox__facebook"><span class="specialSpan">facebook</span></a>
+                            <a href="#" class="socialBox__twitter"><span class="specialSpan">twitter</span></a>
+                            <a href="#" class="socialBox__google"><span class="specialSpan">google plus</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="grid">
+            <div class="footer__wrapper">
+                <div class="footer__aboutUs">
+                    <div class="footer__title">About Us</div>
+                    <ul class="footer__itemList">
+                        <li><a class="footer__item" href="#">About us</a></li>
+                        <li><a class="footer__item" href="#">Why us</a></li>
+                        <li><a class="footer__item" href="#">Customer Stories</a></li>
+                        <li><a class="footer__item" href="#">Press Resources</a></li>
+                        <li><a class="footer__item" href="#">Press Releases</a></li>
+                        <li><a class="footer__item" href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__proparties">
+                    <div class="footer__title">Proparties</div>
+                    <ul class="footer__itemList">
+                        <li><a class="footer__item" href="#">Rent a home</a></li>
+                        <li><a class="footer__item" href="#">Lease a home</a></li>
+                        <li><a class="footer__item" href="#">Buy a home</a></li>
+                        <li><a class="footer__item" href="#">Sell a home</a></li>
+                        <li><a class="footer__item" href="#">Ask advices</a>
+                    </ul>
+                </div>
+                <div class="footer__costamer">
+                    <div class="footer__title">Costamer Testimonials</div>
+                    <div class="footer__item">Lorem Ipsum is simply dummy text of the printing and<br>
+                        typesetting industry. Lorem Ipsum has been the industr<br>standard dummy text ever since the 1500s,<br>
+                        when an unknown printer took a <br>
+                        <b>Lorem Ipsum is simply Owner,<br> Lorem Ipsum</b></div>
+                </div>
+                <div class="footer__copy">
+                    <div class="logo footer__logo">
+                        <a href="#" class="logo__wrapper">
+                            <div class="logo__img"><img src="img/logo/Logo.png" alt="logo"></div>
+                            <div class="logo__box">
+                                <div class="logo__title">Realestate Company</div>
+                                <div class="logo__subtitle">Lorem Ipsum is simply dummy text</div>
+                            </div>
+                        </a>
+                    </div>
+                    <a class="footer__author" href="#">&#169; cssauthor.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="lib/slick/slick.js"></script>
     <script src="js/main.js"></script>
