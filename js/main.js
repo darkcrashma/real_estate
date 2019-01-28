@@ -5,14 +5,22 @@ $(document).ready( function() {
         slidesToShow: 1,
         slidesToScroll: 1,
     });
+    $('.footer__slider').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        prevArrow: '.footer__sliderPrev',
+        nextArrow: '.footer__sliderNext'
+    });
 });
 
-$('[type="radio"]').click(function(){   //таб статей в сайдбаре
+$('[type="radio"]').click(function(){
     if ($("input[id='chooseFlats__tenants']").is(':checked')){
-        $('#sidebar-recent').css('display', 'none').slideDown(1000);
-        $('#sidebar-popular').css('display', 'none');
+        $('.chooseFlats__filter').css('display', 'none').slideDown(500);
+        $('.chooseFlats__filter').css('display', 'none');
     }else if ($("input[id='chooseFlats__oweners']").is(':checked')){
-        $('#sidebar-popular').css('display', 'none').slideDown(1000);
-        $('#sidebar-recent').css('display', 'none');
+        $('.chooseFlats__filter').css('display', 'none').slideDown(500);
+        $('.chooseFlats__filter').css('display', 'none');
     }
 });
