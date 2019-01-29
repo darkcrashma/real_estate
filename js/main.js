@@ -13,7 +13,18 @@ $(document).ready( function() {
         prevArrow: '.footer__sliderPrev',
         nextArrow: '.footer__sliderNext'
     });
+
+    $('.gamburger').on('click', function (e) {
+       e.preventDefault();
+       $(this).toggleClass("gamburger--active");
+       $('.headerMenu').toggleClass('headerMenu--active');
+       $('body, html').toggleClass('overflowHidden');
+    });
+
 });
+
+
+
 
 $('[type="radio"]').click(function(){
     if ($("input[id='chooseFlats__tenants']").is(':checked')){
@@ -24,3 +35,4 @@ $('[type="radio"]').click(function(){
         $('.chooseFlats__filter').css('display', 'none');
     }
 });
+

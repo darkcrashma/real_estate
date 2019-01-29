@@ -361,6 +361,10 @@ input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
 input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
 input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 
+.overflowHidden {
+    overflow: hidden;
+}
+
 /*Оформляем верхнее меню*/
 .headerTop {
     background-color: #4f86a8;
@@ -476,15 +480,20 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     transition:  0.3s ease;
 }
 
-.navigation__item:hover {
-    color: #ffffff;
+@media (min-width: 690px) {
+
+    .navigation__item:hover {
+        color: #ffffff;
+    }
+    .navigation__item:hover span,
+    .navigation__item:hover.navigation__item::before,
+    .navigation__item:hover.navigation__item::after {
+        visibility: visible;
+        opacity: 1;
+    }
 }
-.navigation__item:hover span,
-.navigation__item:hover.navigation__item::before,
-.navigation__item:hover.navigation__item::after {
-    visibility: visible;
-    opacity: 1;
-}
+
+
 
 /*Оформляем блок авторизации*/
 .headerMenu__signIn,
@@ -624,8 +633,10 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     transform: translateY(4px);
 }
 .chooseFlats__checkboxLabel {
-    transform: translateY(1px);
+    display: block;
     margin-left: 10px;
+    margin-bottom: 17px;
+
 }
 .chooseFlats__addressForm {
     margin-top: 10px;
@@ -716,7 +727,7 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
 }
 .chooseFlats__checkForm+span {
     position: relative;
-    padding: 0 0 0 30px;
+    padding: 0 0 0 25px;
     cursor: pointer;
 }
 .chooseFlats__checkForm+span:before {
@@ -724,8 +735,8 @@ input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
     position: absolute;
     top: -1px;
     left: 0;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 5px;
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.07), inset 0 0 0 2px #fcfdfd;
     border: 1px solid #bbbbbb;
@@ -1139,4 +1150,204 @@ body {
 .footer__sliderNext:hover.footer__sliderNext::after,
 .footer__sliderPrev:hover.footer__sliderPrev::after {
     opacity: 1;
+}
+
+
+@media (max-width: 1100px) {
+    .grid {
+        width: 95vw;
+        margin: 0 auto;
+    }
+
+    .chooseFlats__addressForm {
+        width: 100%;
+    }
+
+    .memberBox__form {
+        flex-direction: column;
+    }
+
+    .formBox__input {
+        margin-bottom: 10px;
+    }
+
+    .memberBox__btn {
+        width: 50%;
+    }
+
+    .footer__costamer {
+        width: 30%;
+        margin: 0;
+    }
+
+    .footer__aboutUs,
+    .footer__proparties,
+    .footer__copy {
+        width: 20%;
+        margin: 0;
+    }
+    .footer__copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .footer__slider {
+        width: 100%;
+    }
+    .sliderFlats__description {
+        width: 93%;
+    }
+    .chooseFlats__addressForm {
+        font-size: 14px;}
+    .sliderFlats .slick-dots li button::before {
+        font-size: 15px;
+    }
+    .sliderFlats .slick-dots {
+        bottom: 20px
+    }
+}
+/*Гамбургер меню*/
+.gamburger {
+    position: fixed;
+    display: none;
+    top: 17px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #c2f2ed;
+    border-radius: 50%;
+    z-index: 501;
+}
+
+.gamburger span,
+.gamburger span::after,
+.gamburger span::before {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 50%;
+    margin-left: -10px;
+    border-radius: 1px;
+    background-color: #4b83a6;
+    transition: all 0.3s;
+}
+.gamburger span::after,
+.gamburger span::before {
+    content: '';
+}
+.gamburger span::after {
+    top: calc(50% + 6px);
+}
+.gamburger span::before {
+    top: calc(50% - 6px);
+}
+
+
+
+.gamburger--active span {
+    height: 0;
+}
+.gamburger--active span::before {
+    transform: rotate(-45deg);
+    top: 50%;
+}
+.gamburger--active span::after {
+    transform: rotate(45deg);
+    top: 50%;
+}
+
+
+/*Адаптив*/
+@media (max-width: 1100px) {.grid {width: 95vw; margin: 0 auto; }
+    .chooseFlats__addressForm {width: 100%;}
+    .memberBox__form {flex-direction: column;}
+    .formBox__input {margin-bottom: 10px;}
+    .memberBox__btn {width: 50%;}
+    .footer__costamer {width: 30%; margin: 0;}
+    .footer__aboutUs,.footer__proparties,.footer__copy {width: 20%; margin: 0;}
+    .footer__copy { display: flex;flex-direction: column;justify-content: space-between;}
+    .footer__slider { width: 100%;}
+    .sliderFlats__description {width: 93%;}
+    .chooseFlats__addressForm { font-size: 14px;}
+    .sliderFlats .slick-dots li button::before {font-size: 15px;}
+    .sliderFlats .slick-dots {bottom: 20px;}}
+@media (max-width: 980px) {.signUpBox {background-position-x: center;}}
+@media (max-width: 940px) {.signUpBox {background-position-x: right;}.formBox__title {font-size: 18px;}.signUpBox__btn {font-size: 18px;}}
+@media (max-width: 790px) {.searchFlats__wrapper {width: 90vw;margin: 0 auto;justify-content: center;}.searchItem {width: 31%;}}
+@media (max-width: 776px) {
+    .aboutFlats__wrapper {flex-direction: column;}
+    .sliderFlats {width: 100%;}
+    .chooseFlats {width: 100%;}
+    .chooseFlats__filterBlock {align-items: center;justify-content: space-between; flex-flow: nowrap}
+    .sliderFlats .slick-dots {bottom: auto; text-align: right}
+    .sliderFlats__description {width: 100%;}
+    .chooseFlats__addressForm {font-size: 18px;}
+    .chooseFlats__labelsBlock {flex-direction: column; text-align: right; }
+    .chooseFlats__formLabel {margin-bottom: 20px;}
+    .chooseFlats__labelsBlock{width: 20%;}
+    button.chooseFlats__btn {margin: 0; padding: 10px 50px; }}
+@media (max-width: 710px) { .searchItem {width: 47%;}}
+
+@media (max-width: 690px) { button.chooseFlats__btn { padding: 10px 34px; }
+    .signUpBox {padding: 10px 20px 10px 10px;}
+    .headerTop__phone {font-size: 18px;}
+    .headerTop__call {padding-top:55px}
+    .gamburger {display: block;}
+    .headerMenu {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        z-index: 500;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .headerMenu--active {
+        opacity: 1;
+        visibility: visible;
+    }
+    .headerMenu__wrapper {
+        flex-direction: column-reverse;
+    }
+    .navigation__list {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+    .headerMenu__authorisation {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+@media (max-width: 500px) {
+    .chooseFlats__labelsBlock {
+        width: 39%;}
+    button.chooseFlats__btn {
+        margin-left: 10px;
+        padding: 8px 26px;
+    }
+    .searchItem {
+        width: 100%;
+    }
+    .footer__copy {
+        opacity: 0;
+        visibility: hidden;
+    }
+    .footer__wrapper {
+        padding-right: 20px;
+    }
+    .footer__aboutUs,
+    .footer__proparties,
+    .footer__copy {
+        width: 24%;
+    }
+    .formBox__title {
+        font-size: 11px;
+    }
+    .signUpBox__btn {
+        font-size: 12px;
+    }
 }
