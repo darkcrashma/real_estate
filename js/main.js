@@ -24,8 +24,6 @@ $(document).ready( function() {
 });
 
 
-
-
 $('[type="radio"]').click(function(){
     if ($("input[id='chooseFlats__tenants']").is(':checked')){
         $('.chooseFlats__filter').css('display', 'none').slideDown(500);
